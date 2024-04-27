@@ -7,7 +7,12 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: "var(--font-poppins)",
+        roboto: "var(--font-roboto)",
+      },
+    },
   },
   plugins: [],
 };
