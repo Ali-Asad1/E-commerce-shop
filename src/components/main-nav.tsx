@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 import { Category } from "@/types";
 
-import { cn } from "@/utils/cn";
+import { cn } from "@/utils/utils";
 
 interface MainNavProps {
   data: Category[];
