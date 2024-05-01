@@ -3,6 +3,7 @@ import { getStore } from "@/actions/get-store";
 import Link from "next/link";
 
 import MainNav from "./main-nav";
+import NavbarActions from "./navbar-actions";
 
 const Navbar = async () => {
   const categories = await getCategories();
@@ -15,6 +16,7 @@ const Navbar = async () => {
             <p className="font-poppins text-xl font-bold">{store.name}</p>
           </Link>
           <MainNav data={categories} />
+          <NavbarActions />
         </div>
       </div>
     </div>
