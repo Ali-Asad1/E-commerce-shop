@@ -25,6 +25,11 @@ const SliderMain = forwardRef<HTMLDivElement, SliderMainProps>(({ images }, ref)
         perPage: 1,
         speed: 1000,
         pagination: false,
+        breakpoints: {
+          640: {
+            drag: true,
+          },
+        },
       }}
     >
       <SplideTrack>
