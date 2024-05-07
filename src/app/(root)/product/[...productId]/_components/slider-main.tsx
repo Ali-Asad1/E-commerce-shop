@@ -41,7 +41,7 @@ const SliderMain = forwardRef<HTMLDivElement, SliderMainProps>(({ images }, ref)
               fill
               placeholder="blur"
               blurDataURL={image.url}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
             />
           </SplideSlide>
         ))}
