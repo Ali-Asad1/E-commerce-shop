@@ -3,8 +3,8 @@ import { Suspense } from "react";
 
 import { formatter } from "@/utils/utils";
 
+import { getProduct } from "@/actions/get-product";
 import { getProducts } from "@/actions/get-products";
-import { getProduct } from "@/actions/getProduct";
 
 import ProductsList from "@/components/products-list";
 import ProductCardLoading from "@/components/ui/product-card-loading";
