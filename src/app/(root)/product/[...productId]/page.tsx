@@ -6,13 +6,12 @@ import { formatter } from "@/utils/utils";
 import { getProduct } from "@/actions/get-product";
 import { getProducts } from "@/actions/get-products";
 
+import AddToCartBtn from "@/components/add-to-cart-btn";
 import ProductsList from "@/components/products-list";
 import ProductCardLoading from "@/components/ui/product-card-loading";
 import { Separator } from "@/components/ui/separator";
 
-import AddToCartBtn from "./_components/add-to-cart-btn";
-
-const Gallery = dynamic(() => import("./_components/gallery"), {
+const Gallery = dynamic(() => import("@/components/gallery/gallery"), {
   ssr: false,
   loading: () => <div className="aspect-[2/1.5] animate-pulse rounded-xl bg-muted"></div>,
 });
