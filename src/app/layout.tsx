@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { poppins, roboto } from "@/lib/fonts";
 
 import "./globals.css";
+import Providers from "./providers";
 
 export const metadata: Metadata = {
   title: "Store",
@@ -19,7 +20,9 @@ export default function RootLayout({
       className={`${poppins.variable} ${roboto.variable} font-roboto subpixel-antialiased`}
       suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
