@@ -34,7 +34,7 @@ const ProductPage = async ({ params }: { params: { productId: string } }) => {
             <h3 className="font-semibold">Color:</h3>
             <div className="size-6 rounded-full border-2" style={{ backgroundColor: product.color.value }} />
           </div>
-          <AddToCartBtn className="!mt-10" />
+          <AddToCartBtn className="!mt-10" data={product} />
         </div>
       </div>
       <Separator className="!my-10" />
