@@ -1,4 +1,3 @@
-import { Expand, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,7 +5,8 @@ import { ProductType } from "@/types";
 
 import { formatter } from "@/utils/utils";
 
-import { Button } from "./button";
+import AddToCartBtn from "../add-to-cart-btn";
+import PreviewButton from "./preview-button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./tooltip";
 
 interface ProductCardProps {
@@ -15,7 +15,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
   return (
-    <Link href={`product/${data.id}`}>
+    <Link href={`/product/${data.id}`}>
       <div className="group cursor-pointer space-y-4 rounded-xl border bg-card p-3 shadow-md transition-colors active:bg-muted">
         <div className="relative aspect-square rounded-xl bg-muted">
           <Image
@@ -29,12 +29,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
           />
           <div className="absolute bottom-5 w-full opacity-0 transition group-hover:opacity-100">
             <div className="flex items-center justify-center gap-x-6">
-              <Button variant="outline" size="icon">
-                <Expand size={20} />
-              </Button>
-              <Button variant="outline" size="icon">
-                <ShoppingCart size={20} />
-              </Button>
+              <PreviewButton data={data} />
+              <AddToCartBtn iconButton data={data} />
             </div>
           </div>
         </div>
