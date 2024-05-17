@@ -1,6 +1,7 @@
 "use client";
 
 import { ShoppingBag } from "lucide-react";
+import Link from "next/link";
 
 import { useCart } from "@/hooks/use-cart-store";
 
@@ -13,8 +14,10 @@ const NavbarActions = () => {
   return (
     <div className="ml-auto flex items-center gap-x-2">
       <div className="relative">
-        <Button size="icon">
-          <ShoppingBag className="h-5 w-5" />
+        <Button size="icon" asChild>
+          <Link href="/cart">
+            <ShoppingBag className="h-5 w-5" />
+          </Link>
         </Button>
         <Badge variant="destructive" className="pointer-events-none absolute -bottom-1.5 -left-1.5 select-none px-1.5">
           {count}
