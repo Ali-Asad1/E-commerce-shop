@@ -4,8 +4,10 @@ import { getProducts } from "@/actions/get-products";
 import Billboard from "@/components/billboard";
 import ProductsList from "@/components/products-list";
 
+const mainBillboardId = process.env.NEXT_MAIN_BILLBOARD_ID;
+
 export default async function Home() {
-  const billboard = await getBillboard("65f8b8dc6031f67c23bcadb1");
+  const billboard = await getBillboard(mainBillboardId as string);
   const products = await getProducts({ isFeatured: true });
 
   return (
